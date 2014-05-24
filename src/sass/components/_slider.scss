@@ -1,0 +1,23 @@
+.slider{
+  padding: $unit/4 0;
+}
+
+.slider__title{
+  width: 80px;
+  display: inline-block;
+  text-align: right;
+  padding-right: $unit/2;
+  text-transform: uppercase;
+}
+
+.slider__handler{
+  width: 200px;
+  margin-right: 5px;
+}
+
+.slider{
+  .swatch__block{
+    margin-top: 3px;
+  }
+}
+

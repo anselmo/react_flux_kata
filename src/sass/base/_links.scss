@@ -1,0 +1,23 @@
+// ------------------------------------
+// Links
+// -------------------------------------
+.link{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.link--invert{
+  @extend .link;
+  color: $white;
+}
+
+.link--strong{
+  @extend .link;
+  font-weight: bold;
+}
+
+.link--wrap{
+  text-decoration: none;
+}

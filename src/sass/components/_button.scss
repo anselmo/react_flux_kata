@@ -1,0 +1,85 @@
+// ------------------------------------
+// Buttons
+// -------------------------------------
+button, input[type=submit], input[type=image]{
+  border: 0;
+  outline: none;
+  &:focus{
+    outline: 1px dotted $black;
+  }
+}
+
+.btn{
+  @extend %smooth-text;
+  @include font-size($type-regular);
+  @include vendor(box-sizing, border-box);
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap; 
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
+  line-height: 1em;
+  border-radius: 4px;
+  padding-top: 0;
+  padding-bottom:0; 
+}
+
+.btn{
+  &,
+  &:hover{
+    text-decoration:none;
+  }
+}
+
+.btn--primary{
+  background-color: $grey;
+  border-radius: 2px solid #fff;
+  padding: $unit/3 $unit;
+  border: 1px solid rgba(#777,0.5);
+  text-transform: uppercase;
+  color: #333;
+  font-weight: bold;
+  &:hover{
+    background-color: #444;
+    color: #fff;
+  }
+}
+
+// Sizes
+
+.btn--small{
+  padding: $unit/4 $unit/2;
+  @include font-size($type-tiny);
+}
+
+.btn--large{
+  padding: $unit/2 $unit*2;
+  @include font-size($type-large);
+  font-weight: bold;
+  min-width: 200px;
+}
+
+.btn--quiet{
+  @include vendor(box-sizing, border-box);
+  display: inline-block;
+  background: transparent;
+  outline: 0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active,
+button[disabled]:focus,
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus{
+  background-color: $grey;
+  color: $grey-light;
+  cursor: text;
+}
+

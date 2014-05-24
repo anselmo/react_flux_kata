@@ -1,0 +1,8 @@
+.row{
+  @extend .cf;
+  width: 100%;
+}
+
+.row__inner{
+  margin: 0 auto;
+}

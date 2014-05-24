@@ -1,0 +1,43 @@
+{
+  "name": "react-colour-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/js/app.js",
+  "dependencies": {
+    "es6-promise": "~0.1.1",
+    "react": "~0.10",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "browserify": "~2.36.0",
+    "envify": "~1.2.0",
+    "reactify": "~0.4.0",
+    "statics": "~0.1.0",
+    "uglifyjs": "~2.3.6",
+    "watchify": "~0.4.1",
+    "grunt": "~0.4.2",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.5.3",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-compress": "~0.4.1",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "jest-cli": "^0.1.2",
+    "jquery": "^2.1.1",
+    "jest": "^0.1.37",
+    "color": "^0.6.0"
+  },
+  "scripts": {
+    "start": "watchify -e src/js/app.js -o public/assets/js/app.js -v -d .",
+    "test": "jest"
+  },
+  "author": "Anselmo da Silva",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

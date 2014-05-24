@@ -1,0 +1,46 @@
+.swatch{
+  display: inline-block;
+}
+
+.swatch--small{
+  width: 20px;
+  height: 20px;
+}
+
+.swatch--medium{
+  width: 80px;
+  height: 80px;
+}
+
+.swatch--large{
+  width: 200px;
+  height: 200px;
+}
+
+.swatch--full{
+  width: 100%;
+  height: 100%;
+}
+
+.swatch__block{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #e3e3e3;
+  position: relative;
+  @include transition(all, 0.5s);
+}
+
+.swatch__label{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: $type-large;
+}
+
+.swatch--composite{
+  @extend .cf;
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+// ------------------------------------
+// Typography
+// -------------------------------------
+
+$base-font-family: Helvetica, Arial, Georgia, sans-serif;
+$base-font-size: 14px!default;
+$base-line-height: 24px!default;
+$line-height-ratio: $base-line-height/$base-font-size;
+
+// ------------------------------------
+// Unit
+// -------------------------------------
+
+$unit: 20px;
+$half-unit: $unit/2;
+$duble-unit: $unit*2;
+
+$base-round: 4px!default;
+
+$type-large: 24px;
+$type-regular: 14px;
+$type-small: 12px;
+$type-tiny: 10px;
+
+// ------------------------------------
+// Vendor
+// -------------------------------------
+
+$global-border-box: true!default;
+

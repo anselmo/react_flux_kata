@@ -1,0 +1,22 @@
+.group{
+  padding: $unit;
+}
+
+.group__head{
+  padding: $unit/2 0;
+  @extend .cf;
+  border-bottom: 10px solid #e3e3e3;
+}
+
+.group__title{
+
+}
+
+.group__body{
+  padding: $unit/2 0;
+  @extend .cf;
+}
+
+.group__footer{
+
+}

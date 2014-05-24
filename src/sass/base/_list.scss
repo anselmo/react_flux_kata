@@ -1,0 +1,22 @@
+// ------------------------------------
+// Lists
+// -------------------------------------
+
+ul, ol, nav, .nav{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav{ 
+  li{
+    float: left;
+  }
+}
+
+.nav--stack{ 
+  li{
+    width: 100%;
+  }
+}
+

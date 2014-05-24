@@ -1,0 +1,16 @@
+// ------------------------------------
+// Visual helpers
+// -------------------------------------
+
+.visuallyhidden{
+  @include accessibility;
+}
+
+.is-hidden{
+  display: none;
+}
+
+.is-visible{
+  display: block;
+}
+

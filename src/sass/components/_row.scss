@@ -1,0 +1,9 @@
+.row{
+  @extend .cf;
+}
+
+.row__inner{
+  max-width: 760px;
+}
+
+

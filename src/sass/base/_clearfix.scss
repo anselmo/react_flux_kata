@@ -1,0 +1,22 @@
+// ------------------------------------
+// Clearfix
+// -------------------------------------
+
+.cf{
+  &:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+.cf--ie{
+  &:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}

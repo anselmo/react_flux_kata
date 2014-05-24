@@ -1,0 +1,21 @@
+// ------------------------------------
+// Content
+// -------------------------------------
+
+%content-after{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+  }
+}
+
+%content-before{
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+  }
+}
+
+

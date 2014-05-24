@@ -1,0 +1,19 @@
+.colour-select{
+  @extend .grid;
+  @extend .cf;
+  margin: $unit/2 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.colour-select__handler{
+  @extend .grid__item;
+}
+
+.colour-select__swatch{
+  @extend .grid__item;
+}
+
+.colour-select__actions{
+  @extend .grid__item;
+}
+  

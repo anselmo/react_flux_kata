@@ -1,0 +1,42 @@
+// ------------------------------------
+//  MEDIA
+// -----------------------------------
+
+.media{
+  display:block;
+  @extend .cf;
+}
+
+.media__fig{
+  float:left;
+}
+
+// Reversed image location
+
+.media--rev{
+  .media__fig{
+    float:right;
+  }
+}
+
+.media__fig img,
+.media__fig-rev img{
+  display:block;
+}
+
+.media__body{
+  overflow:hidden;
+}
+
+.media__body,
+.media__body > :last-child{
+  margin-bottom:0;
+}
+
+.gap .media--fig{
+  margin-right: $half-unit;
+}
+.gap .media--fig-rev{
+  margin-left: $half-unit;
+}
+

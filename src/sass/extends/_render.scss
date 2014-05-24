@@ -1,0 +1,14 @@
+// ------------------------
+// Type Render
+// ------------------------
+
+%smooth-text{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+%subpixel-text{
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+}

@@ -1,0 +1,17 @@
+// ------------------------------------
+// Images
+// -------------------------------------
+
+img{
+  max-width:100%;
+}
+
+img[width],
+img[height]{
+  max-width:none;
+}
+
+figure > img{
+  display:block;
+}
+
