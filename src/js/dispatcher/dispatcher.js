@@ -4,7 +4,7 @@
 
 
 var Promise = require('es6-promise').Promise;
-var merge = require('react/lib/merge');
+var assign = require('object.assign');
 
 var _callbacks = [];
 var _promises = [];
@@ -24,7 +24,7 @@ var _clearPromises = function() {
 };
 
 var Dispatcher = function() {};
-Dispatcher.prototype = merge(Dispatcher.prototype, {
+Dispatcher.prototype = assign(Dispatcher.prototype, {
 
   register: function(callback) {
     _callbacks.push(callback);

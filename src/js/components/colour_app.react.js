@@ -1,7 +1,3 @@
-/**
-* @jsx React.DOM
-*/
-
 var React = require('react');
 
 var ColourStore = require('../stores/colour_store');
@@ -32,6 +28,10 @@ var ColourApp = React.createClass({
     return { 
       title: 'Colour Mixer'
     };
+  },
+  
+  propTypes: {
+    title: React.PropTypes.string
   },
 
   componentDidMount: function() {
@@ -68,14 +68,11 @@ var ColourApp = React.createClass({
 
   render: function() {
     var colours = [];
-    this.state.colours.forEach(function(colour, i){
-      colours.push(
-        <ColourSelect key={i} value={colour}/> 
-      );
+ 
+    var colours = this.state.colours.map(function(colour, i){
+       return  <ColourSelect key={i} id={i} value={colour}/>;
     });
 
-    var composite_swatch = this.state.composite ? <Swatch size='large' show_label='true' val={this.state.composite}/> : '';
-    
     return (
         <div className='group group--colour'>
           <div className='group__head split'>
@@ -93,7 +90,7 @@ var ColourApp = React.createClass({
            </div>
            <div className='grid__item one-quarter'>
              <div className='swatch--composite'>
-               {composite_swatch}
+               <Swatch size='large' show_label='true' val={this.state.composite}/>
               </div>
            </div>
          </div>

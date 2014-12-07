@@ -4,7 +4,8 @@
 
 var Dispatcher = require('../dispatcher/app_dispatcher');
 var EventEmitter = require('events').EventEmitter;
-var merge = require('react/lib/merge');
+var assign = require('object.assign');
+
 var Color = require('color');
 var ColourConstants = require('../constants/colour_constants');
 
@@ -14,7 +15,7 @@ var _colours = [
   {r: 255, g: 255, b: 255 },
 ];
 
-var ColourStore = merge(EventEmitter.prototype, {
+var ColourStore = assign(EventEmitter.prototype, {
   
   getAll: function() {
     return _colours;
@@ -40,7 +41,7 @@ var ColourStore = merge(EventEmitter.prototype, {
   },
 
   update: function(args){
-    _colours[args.id][args.ref] = args.value;
+    _colours[args.group][args.id] = args.value;
   },
 
   remove: function(args){

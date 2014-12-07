@@ -1,7 +1,3 @@
-/**
-* @jsx React.DOM
-*/
-
 var React = require('react');
 var Color = require('color');
 var Swatch = React.createClass({

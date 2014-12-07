@@ -1,7 +1,3 @@
-/**
-* @jsx React.DOM
-*/
-
 var React = require('react');
 var Slider = require('./slider.react.js');
 var Swatch = require('./swatch.react.js');
@@ -9,6 +5,7 @@ var Helper = require('../helpers/colour_helper.js');
 var ColourActions = require('../actions/colour_actions.js');
 
 var ColourSelect = React.createClass({
+ 
   getDefaultProps:function(){
     return { 
       value: {
@@ -16,30 +13,28 @@ var ColourSelect = React.createClass({
         g: 0,
         b: 0
       }
-    }
+    };
   },
 
   propTypes: {
     value: React.PropTypes.object.isRequired,
+    id: React.PropTypes.number
   },
 
   render: function() {
-    var _colour_components = [];
-    var _i = 0;
-    for(var c in this.props.value){
-      var _val = Helper.colourFromComponent(c, this.props.value[c]);
-      _colour_components.push(
-        <Slider id={this.props.key} key={_i} ref={c} label={c} val={this.props.value[c]}>
-          <Swatch val={ _val }/>
-        </Slider>
-      );
-      _i = _i + 1;
-    }
+    var _this = this;
+    
+    var colour_components = Object.keys(this.props.value).map(function(k,i){
+      var _val = Helper.colourFromComponent(k, _this.props.value[k]);
+      return <Slider key={i} group={_this.props.id} id={k} label={k} val={_this.props.value[k]}>
+               <Swatch val={ _val }/>
+             </Slider>
+    })
 
     return (
       <div className='colour-select'>
         <div className='colour-select__handler'>
-          {_colour_components}
+          {colour_components}
         </div>
         <div className='colour-select__swatch'>
           <Swatch size='medium' val={this.props.value}/>
@@ -52,16 +47,12 @@ var ColourSelect = React.createClass({
   },
 
   remove: function(){
-    ColourActions.remove(
-      {
-        id: this.props.key,
-      }
-    );
+    ColourActions.remove({
+      id: this.props.id,
+    });
   }
 
 });
 
 module.exports = ColourSelect;
-
-
 
